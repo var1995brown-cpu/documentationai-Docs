@@ -1,0 +1,156 @@
+---
+title: Core Features Guide
+description: Dive into the essential features of JSON Viewer AI, including structured viewing, error validation, and formatting options for better JSON management.
+---
+
+## Overview
+
+JSON Viewer AI simplifies working with JSON data through intuitive tools. You can visualize complex structures, catch syntax errors instantly, format for readability, and search efficiently. These features help developers, testers, and data analysts handle JSON from APIs, configs, or logs without frustration.
+
+<Columns cols={3}>
+  <Card title="Tree View" icon="git-branch" href="#tree-view">
+    Navigate nested objects visually like a file explorer.
+  </Card>
+  <Card title="Validation" icon="check-circle" href="#validation">
+    Detect and fix syntax errors in seconds.
+  </Card>
+  <Card title="Format JSON" icon="type" href="#formatting">
+    Beautify or minify with one click.
+  </Card>
+  <Card title="Search" icon="search" href="#search">
+    Find values across deep structures quickly.
+  </Card>
+</Columns>
+
+## Tree View and Code View
+
+Switch between visual tree and raw code views to suit your workflow.
+
+<Tabs>
+  <Tab title="Tree View" icon="git-branch">
+    Expand and collapse nodes to explore `{ "user": { "profile": { ... } } }` structures. Click any key to copy its value or path.
+    
+    ```json
+    {
+      "user": {
+        "id": 12345,
+        "name": "Jane Smith",
+        "profile": {
+          "email": "jane@example.com",
+          "preferences": {
+            "theme": "dark",
+            "notifications": true
+          }
+        }
+      }
+    }
+    ```
+  </Tab>
+  <Tab title="Code View" icon="code">
+    Edit JSON directly with syntax highlighting. Changes sync to the tree view automatically.
+    
+    Use this for quick inspections of API responses like GitHub user data.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  Pro tip: Use tree view for exploration, code view for editing. Both update in real-time.
+</Callout>
+
+## Validate JSON Syntax
+
+Catch errors before they break your app. Paste or upload JSON, and get instant feedback.
+
+<Steps>
+  <Step title="Paste JSON" icon="clipboard">
+    Enter your data in the editor.
+  </Step>
+  <Step title="Run Validation" icon="play">
+    Click "Validate". Errors highlight with line numbers and explanations.
+  </Step>
+  <Step title="Fix Errors" icon="edit-3">
+    Jump to issues and correct them. Re-validate to confirm.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="Valid,Invalid">
+  ```json
+  {
+    "id": 1,
+    "name": "Valid User",
+    "active": true
+  }
+  ```
+  ```json
+  {
+    "id": 1,
+    "name": "Invalid User"
+    "active": true  // Missing comma
+  }
+  ```
+</CodeGroup>
+
+Common issues include missing commas, unquoted keys, or trailing commas. Validation supports RFC 8259 standards.
+
+## Beautify and Minify JSON
+
+Transform messy JSON for sharing or storage.
+
+<Tabs>
+  <Tab title="Beautify" icon="maximize">
+    Converts compact JSON to indented format for readability.
+    
+````json
+// Original minified
+{"user":{"id":1,"name":"John","posts":[{"title":"Post 1","views":150}]}}
+````
+
+    Click "Beautify" to get:
+
+    ```json
+    {
+      "user": {
+        "id": 1,
+        "name": "John",
+        "posts": [
+          {
+            "title": "Post 1",
+            "views": 150
+          }
+        ]
+      }
+    }
+    ```
+  </Tab>
+  <Tab title="Minify" icon="minimize">
+    Removes whitespace for compact transmission.
+    
+    Result: `{"user":{"id":1,"name":"John","posts":[{"title":"Post 1","views":150}]}}`
+  </Tab>
+</Tabs>
+
+## Search Within JSON
+
+Locate values in large structures without manual scanning.
+
+<Steps>
+  <Step title="Enter Query" icon="search">
+    Type keywords, paths like `{user.id}`, or regex in the search bar.
+  </Step>
+  <Step title="Highlight Matches" icon="highlighter">
+    Results expand paths and highlight in both views.
+  </Step>
+  <Step title="Copy or Jump" icon="copy">
+    Click to copy value or navigate directly.
+  </Step>
+</Steps>
+
+<Expandable title="Advanced Search Tips" default-open="false">
+  - Case-insensitive by default
+  - Supports JSONPath: `{$.user[*].name}`
+  - Regex: `/^err.*/` for error keys
+</Expandable>
+
+<Callout kind="success">
+  Master these features to boost your JSON workflow. Try combining search with tree view for API debugging.
+</Callout>

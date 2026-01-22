@@ -1,0 +1,113 @@
+---
+title: Introduction to JSON Viewer AI
+description: Discover JSON Viewer AI, a free online tool for viewing, validating, and beautifying JSON data to make complex structures easy to read and understand.
+---
+
+## Overview
+
+JSON Viewer AI is a free online tool that helps you view, validate, and beautify JSON data effortlessly. You paste your JSON, and it transforms complex, minified structures into readable, tree-like views with syntax highlighting. Use it to spot errors quickly, explore nested objects, and format data for sharing or debugging.
+
+## Key Features
+
+JSON Viewer AI offers powerful tools tailored for developers and data analysts working with JSON daily.
+
+<Columns cols={3}>
+  <Card title="Interactive Tree View" icon="eye" href="#tree-view">
+    Expand and collapse nested objects to navigate large JSON structures intuitively.
+  </Card>
+  <Card title="Real-Time Validation" icon="check-circle" href="#validation">
+    Instantly detect syntax errors, missing commas, or invalid data types as you edit.
+  </Card>
+  <Card title="Auto-Beautify" icon="wand-2" href="#beautify">
+    One-click formatting with customizable indentation for perfect readability.
+  </Card>
+</Columns>
+
+## Quick Start
+
+Get started in seconds with these simple steps.
+
+<Steps>
+  <Step title="Visit the Tool" icon="globe">
+    Open [JSON Viewer AI](https://jsonviewer.ai) in your browser—no installation required.
+  </Step>
+  <Step title="Paste Your JSON" icon="clipboard">
+    Copy and paste your JSON data into the editor. For example:
+    
+````json
+{"user":{"id":123,"name":"Alice Johnson","orders":[{"id":456,"total":29.99},{"id":789,"total":149.99}]}}
+````
+  </Step>
+  <Step title="View and Validate" icon="search">
+    Click `View` to see the tree structure, `Validate` to check for errors, or `Beautify` to format it.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Pro tip: Use the search bar to find specific keys like `user.id` across deeply nested objects.
+</Callout>
+
+## Example: Before and After Beautify
+
+See the difference beautifying makes on real API response data.
+
+<CodeGroup tabs="Minified,Beautified">
+````json
+{"api":{"users":[{"id":1,"email":"user@example.com","profile":{"name":"John","preferences":{"theme":"dark","notifications":true}}},{"id":2,"email":"admin@example.com","profile":{"name":"Jane","preferences":{"theme":"light","notifications":false}}]},"stats":{"total":2,"active":1}}
+````
+````json
+{
+  "api": {
+    "users": [
+      {
+        "id": 1,
+        "email": "user@example.com",
+        "profile": {
+          "name": "John",
+          "preferences": {
+            "theme": "dark",
+            "notifications": true
+          }
+        }
+      },
+      {
+        "id": 2,
+        "email": "admin@example.com",
+        "profile": {
+          "name": "Jane",
+          "preferences": {
+            "theme": "light",
+            "notifications": false
+          }
+        }
+      }
+    ],
+    "stats": {
+      "total": 2,
+      "active": 1
+    }
+  }
+}
+````
+</CodeGroup>
+
+## Benefits for You
+
+You save time debugging APIs, preparing data for reports, or sharing JSON with teams. The tool handles massive payloads without lag, supports dark mode for late-night coding, and exports formatted JSON as files. No sign-up needed—purely client-side for privacy.
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="book-open" href="/quickstart">
+    Dive into advanced usage like bulk validation and custom themes.
+  </Card>
+  <Card title="API Integration" icon="code" href="/authentication">
+    Learn how to embed JSON Viewer AI in your apps.
+  </Card>
+</Columns>
+
+<Expandable title="Common Use Cases" default-open="false">
+  - API response inspection during development
+  - JSON log analysis for troubleshooting
+  - Data migration and schema validation
+</Expandable>

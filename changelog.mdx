@@ -1,0 +1,129 @@
+---
+title: Changelog
+description: Track the latest updates, new features, and improvements in JSON Viewer AI.
+---
+
+## Recent Updates
+
+<Update label="2024-10-15" description="v2.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added enhanced search functionality that highlights matches across nested JSON structures.
+- Introduced AI-powered suggestions for common JSON fixes, like missing commas or invalid keys.
+
+## Improvements
+
+- Optimized rendering for large JSON files (`>10MB`), reducing load time by 40%.
+- Enhanced validation with real-time error tooltips for quicker debugging.
+
+## Bug Fixes
+
+- Fixed collapse/expand state persistence when switching between tabs.
+- Resolved issue where beautified output lost custom indentation preferences.
+
+</Update>
+
+<Update label="2024-09-20" description="v2.0.0" tags={["breaking", "feature"]}>
+
+## New Features
+
+- Complete UI redesign with dark mode toggle and resizable panels.
+- Added export options: Copy to clipboard, download as `.json` or `.txt`.
+
+## Breaking Changes
+
+- Updated default indentation from 2 to 4 spaces; configure in settings to revert.
+
+## Improvements
+
+- Integrated tree view for hierarchical navigation of JSON objects.
+- Performance boost for validation on arrays with thousands of items.
+
+## Bug Fixes
+
+- Corrected parsing errors for JSON with trailing commas in modern browsers.
+- Fixed drag-and-drop file upload on mobile devices.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.5.0" tags={["bugfix", "improvement"]}>
+
+## Improvements
+
+- Faster beautify operation using optimized parsing library.
+- Added keyboard shortcuts: `Ctrl+B` for beautify, `Ctrl+V` for validate.
+
+## Bug Fixes
+
+- Patched security vulnerability in URL-based JSON loading (XSS prevention).
+- Resolved copy button failure in Safari browsers.
+
+</Update>
+
+## Key Highlights
+
+<Columns cols={3}>
+  <Card title="Enhanced Search" icon="search" href="#recent-updates">
+    Quickly find values in complex nested structures with highlighting.
+  </Card>
+  <Card title="AI Suggestions" icon="zap" href="#recent-updates">
+    Get smart fixes for common JSON errors automatically.
+  </Card>
+  <Card title="Dark Mode" icon="moon" href="#recent-updates">
+    Reduce eye strain with the new customizable theme.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Bookmark this page or subscribe to our RSS feed to stay current with releases. Check your browser console for update notifications on load.
+</Callout>
+
+## Upcoming Changes
+
+<ExpandableGroup>
+  <Expandable title="v2.2.0 Preview" default-open="true">
+    Plan to add collaborative editing via shareable links and real-time validation with schema support. Expect beta in November.
+  </Expandable>
+  <Expandable title="Performance Roadmap">
+    Targeting sub-100ms load times for 50MB+ files through WebAssembly optimizations.
+  </Expandable>
+</ExpandableGroup>
+
+## Upgrade Guide
+
+Follow these steps to ensure you experience the latest features:
+
+<Steps>
+  <Step title="Clear Cache" icon="refresh-cw">
+    Press `Ctrl+Shift+R` (or `Cmd+Shift+R` on macOS) to hard refresh the page.
+  </Step>
+  <Step title="Update Settings" icon="settings">
+    Review your indentation and theme preferences in the settings panel.
+  </Step>
+  <Step title="Test New Features" icon="play">
+    Load a sample JSON and try the search or AI suggestions.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="Input,Beautified">
+  ```json
+  {"user":{"name":"John","age":30,"hobbies":["reading","coding"]}}
+  ```
+  ```json
+  {
+    "user": {
+      "name": "John",
+      "age": 30,
+      "hobbies": [
+        "reading",
+        "coding"
+      ]
+    }
+  }
+  ```
+</CodeGroup>
+
+<Callout kind="info">
+  All changes are deployed instantly as a progressive web app. No downloads required.
+</Callout>
